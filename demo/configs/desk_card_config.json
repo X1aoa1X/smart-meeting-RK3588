@@ -1,0 +1,22 @@
+{
+  "card_size_mm": [210, 100],
+  "dpi": 300,
+  "tag_display_mm": 58,
+  "margin_mm": 12,
+  "font_path_regular": "",
+  "font_path_bold": "",
+  "font_path_latin": "",
+  "name_font_size_pt": 200,
+  "pinyin_font_size_pt": 50,
+  "event_font_size_pt": 46,
+  "role_font_size_pt": 52,
+  "slogan_font_size_pt": 48,
+  "info_font_size_pt": 24,
+  "event_title": "嵌入式大赛",
+  "slogan": "AI for design, design for AI.",
+  "accent_red": "#d20b00",
+  "pill_red_left": "#ff5048",
+  "pill_red_right": "#d40e05",
+  "text_black": "#000000",
+  "subtle_gray": "#222222"
+}

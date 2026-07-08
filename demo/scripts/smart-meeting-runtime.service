@@ -1,0 +1,24 @@
+[Unit]
+Description=Smart Meeting Tracker — fusion_tracker Runtime
+Documentation=https://github.com/your-org/smart-meeting-tracker
+After=network.target
+Wants=graphical.target
+
+[Service]
+Type=simple
+User=root
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/run/user/1000/gdm/Xauthority
+Environment=PYTHONPATH=/home/elf/.local/lib/python3.10/site-packages
+WorkingDirectory=/home/elf/rknn-dev/demo
+ExecStartPre=/bin/chown -R elf:elf /home/elf/rknn-dev/demo/data/ 2>/dev/null || true
+ExecStart=/usr/bin/python3 demos/fusion_tracker.py
+KillSignal=SIGTERM
+TimeoutStopSec=15
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical.target

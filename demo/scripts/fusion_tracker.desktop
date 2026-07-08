@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Smart Meeting Tracker
+Comment=智会追声 — 视听融合追踪系统
+Exec=sudo -E env DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority PYTHONPATH=/home/elf/.local/lib/python3.10/site-packages python3 /home/elf/rknn-dev/demo/demos/fusion_tracker.py
+Icon=utilities-terminal
+Terminal=false
+Categories=Application;
+X-GNOME-Autostart-enabled=true

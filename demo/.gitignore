@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# IDE
+.vscode/
+
+# Backup files
+*.bak
+review.md
+# Archives
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Migrated config files
+fusion_params.json.imported
+xvf_calibration.json.imported
+
+# Tag images 
+tagStandard41h12/*
+
+# Generated exports
+exports/desk_cards/*.png
+exports/desk_cards/*.pdf
+
+# TTS SDK
+tts_sdk/
+
+# TTS cache
+data/tts_cache/
+
+# Streamlit
+.streamlit/
+
+# Compiled C++ pybind11 extension (built by c_realtime_infer_demo/yolo_core/build.sh)
+yolo_core*.so

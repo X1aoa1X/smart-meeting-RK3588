@@ -1,0 +1,25 @@
+[Unit]
+Description=Smart Meeting Tracker — Streamlit Control Console
+Documentation=https://github.com/your-org/smart-meeting-tracker
+After=smart-meeting-runtime.service network-online.target
+Wants=smart-meeting-runtime.service network-online.target
+
+[Service]
+Type=simple
+User=elf
+Environment=PYTHONPATH=/home/elf/.local/lib/python3.10/site-packages
+Environment=RUNTIME_HOST=127.0.0.1
+Environment=RUNTIME_PORT=8800
+WorkingDirectory=/home/elf/rknn-dev/demo
+ExecStart=/home/elf/.local/bin/streamlit run app_streamlit/Home.py \
+    --server.port 8501 \
+    --server.address 0.0.0.0 \
+    --server.headless true
+ExecStop=/bin/bash -c 'pkill -f "streamlit run" || true'
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/home/elf/rknn-dev/demo/data/streamlit.log
+StandardError=append:/home/elf/rknn-dev/demo/data/streamlit.log
+
+[Install]
+WantedBy=graphical.target

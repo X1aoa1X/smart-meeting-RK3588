@@ -1,0 +1,147 @@
+{
+  "enabled": true,
+  "demo_mode": true,
+  "global": {
+    "min_tts_interval_sec": 0,
+    "min_llm_interval_sec": 0,
+    "max_llm_calls_per_meeting": 50,
+    "max_tts_per_5min": 50,
+    "max_pending_tts": 3
+  },
+  "triggers": {
+    "meeting_started": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 0,
+      "template_id": "meeting_started",
+      "fixed_rule_enabled": true
+    },
+    "meeting_ended": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 0,
+      "template_id": "meeting_ended",
+      "fixed_rule_enabled": true
+    },
+    "speaker_confirmed": {
+      "enabled": true,
+      "requires_llm": false,
+      "stable_sec": 1.5,
+      "cooldown_sec": 120,
+      "template_id": "speaker_confirmed",
+      "fixed_rule_enabled": true
+    },
+    "speaker_overtime": {
+      "enabled": true,
+      "requires_llm": true,
+      "threshold_sec": 180,
+      "cooldown_sec": 300,
+      "template_id": "speaker_overtime",
+      "fixed_rule_enabled": true
+    },
+    "silence_timeout": {
+      "enabled": true,
+      "requires_llm": false,
+      "threshold_sec": {
+        "opening": 20,
+        "report": 30,
+        "discussion": 40,
+        "qa": 25,
+        "free_talk": 40
+      },
+      "cooldown_sec": 180,
+      "template_id": "silence_timeout",
+      "fixed_rule_enabled": true
+    },
+    "agenda_timeout": {
+      "enabled": false,
+      "requires_llm": true,
+      "cooldown_sec": 300,
+      "template_id": "agenda_timeout",
+      "fixed_rule_enabled": true
+    },
+    "identity_lost": {
+      "enabled": false,
+      "requires_llm": false,
+      "stable_sec": 8.0,
+      "cooldown_sec": 120,
+      "template_id": "identity_lost",
+      "fixed_rule_enabled": false
+    },
+    "system_error": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 60,
+      "template_id": null,
+      "fixed_rule_enabled": true
+    },
+    "tracking_started": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 30,
+      "template_id": "tracking_started",
+      "fixed_rule_enabled": true
+    },
+    "tracking_paused": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 30,
+      "template_id": "tracking_paused",
+      "fixed_rule_enabled": true
+    },
+    "tracking_lost": {
+      "enabled": false,
+      "requires_llm": false,
+      "cooldown_sec": 30,
+      "template_id": "tracking_lost",
+      "fixed_rule_enabled": false
+    },
+    "host_locked_speaker": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 10,
+      "template_id": "host_locked_speaker",
+      "fixed_rule_enabled": true
+    },
+    "host_unlocked_speaker": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 10,
+      "template_id": "host_unlocked_speaker",
+      "fixed_rule_enabled": true
+    },
+    "manual_summary": {
+      "enabled": true,
+      "requires_llm": true,
+      "cooldown_sec": 15,
+      "template_id": null,
+      "fixed_rule_enabled": true
+    },
+    "manual_agenda": {
+      "enabled": true,
+      "requires_llm": true,
+      "cooldown_sec": 15,
+      "template_id": "agenda_timeout",
+      "fixed_rule_enabled": true
+    },
+    "manual_status": {
+      "enabled": true,
+      "requires_llm": false,
+      "cooldown_sec": 10,
+      "template_id": "manual_system_status",
+      "fixed_rule_enabled": true
+    },
+    "speaker_switched": {
+      "enabled": false,
+      "requires_llm": false,
+      "cooldown_sec": 60,
+      "template_id": "speaker_confirmed",
+      "fixed_rule_enabled": true
+    }
+  },
+  "speech": {
+    "max_chars": 60,
+    "tone": "polite",
+    "fallback_on_llm_error": true
+  }
+}

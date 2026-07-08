@@ -1,0 +1,19 @@
+{
+  "threshold_audio": 5.0,
+  "await_duration": 0.9999999999999999,
+  "audio_jump_thresh": 40.0,
+  "jump_cooldown": 0.4,
+  "visual_lost_frames": 60,
+  "cooldown": 0.1000000000000023,
+  "deadzone": 0.08,
+  "gain_h": 0.5,
+  "gain_v": 0.5,
+  "max_angle_v": 40.0,
+  "vertical_bias": -0.31999999999999995,
+  "vad_enabled": true,
+  "vad_speech_duration": 0.1,
+  "vad_threshold": 0.8500000000000002,
+  "vad_pregain": 1.0,
+  "vad_device": "hw:3,0",
+  "vad_capture_rate": 16000
+}
